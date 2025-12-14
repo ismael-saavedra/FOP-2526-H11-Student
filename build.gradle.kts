@@ -13,9 +13,9 @@ submission {
     // Setzen Sie im folgenden Bereich Ihre TU-ID (NICHT Ihre Matrikelnummer!), Ihren Nachnamen und Ihren Vornamen
     // in Anführungszeichen (z.B. "ab12cdef" für Ihre TU-ID) ein!
     // BEISPIEL:
-    // studentId = "ab12cdef"
-    // firstName = "sol_first"
-    // lastName = "sol_last"
+//     studentId = "ab12cdef"
+//     firstName = "sol_first"
+//     lastName = "sol_last"
     studentId = ""
     firstName = ""
     lastName = ""
@@ -24,14 +24,10 @@ submission {
     requireTests = false
 }
 
-dependencies {
-    implementation(libs.fopbot)
-}
-
-tasks {
-    withType<GraderRunTask> {
-        doFirst {
-            throw GradleException("No public tests are provided for this exercise. For more information, please refer to the Moodle section 'Übungen' -> 'Informationen zu Tests'.")
+jagr {
+    graders {
+        val graderPublic by getting {
+            rubricProviderName.set("h11.H11_RubricProviderPublic")
         }
     }
 }
