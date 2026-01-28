@@ -34,7 +34,7 @@ public class MoveToFrontListRecursive<T> extends MoveToFrontList<T> implements S
     @StudentImplementationRequired("H11.1")
     @Override
     public T get(int index) throws IndexOutOfBoundsException {
-        // TODO H11.4.1
+        // TODO H11.1.1
         return org.tudalgo.algoutils.student.Student.crash("H11.1 - Remove if implemented");
     }
 }
